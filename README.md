@@ -1,26 +1,20 @@
-# sails-docker-build-2
+# SailsJs Docker Image
 
-a [Sails v1](https://sailsjs.com) application
+Build docker image for SailsJs application.
 
+## Build Image
+To build image run this command (__change the tag name & version with your preferred tag name & version__).
 
-### Links
+`$ docker build . -t myorganization/myimage:1.0.0`
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+## Running Container from Image
 
+To create a container from the image, run this command (__change the tag name & version with your preferred tag name & version__).
 
-### Version info
+`$ docker run -d -p 1337:1337 --name sails-app myorganization/myimage:1.0.0`
 
-This app was originally generated on Wed Apr 07 2021 14:26:05 GMT+0700 (Western Indonesia Time) using Sails v1.4.2.
+Then you can access the app from the browser with this url: `http://127.0.0.1:1337`
 
-<!-- Internally, Sails used [`sails-generate@2.0.3`](https://github.com/balderdashy/sails-generate/tree/v2.0.3/lib/core-generators/new). -->
+## Dockerhub image
 
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
+This repository is proven by running build in Dockerhub, you can see the result [here](https://hub.docker.com/r/namikazebadri/sailsjs-app).
